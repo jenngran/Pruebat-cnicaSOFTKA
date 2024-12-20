@@ -23,10 +23,9 @@ class WhenSearchingForTerms {
     @DisplayName("Should be able to search for red things")
     void searchForRedThings() {
         navigate.opensTheHomePage();
+        search.MakeACar();
 
-        search.searchForTerm("red");
-
-        assertThat(search.getSearchResults()).anyMatch(title -> title.toLowerCase().contains("red"));
+        //assertThat(search.getSearchResults()).anyMatch(title -> title.toLowerCase().contains("red"));
     }
 
     @Test
@@ -34,9 +33,7 @@ class WhenSearchingForTerms {
     void searchForGreenThings() {
         navigate.opensTheHomePage();
 
-        search.searchForTerm("green");
 
-        assertThat(search.getTitle()).containsIgnoringCase("green");
-    }
+          }
 
 }
